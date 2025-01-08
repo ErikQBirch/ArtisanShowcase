@@ -8,13 +8,13 @@ function ContactUs() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <section className="App-header">
         <p>
           CONTACT US PAGE
         </p>
         <button
           onClick={() => {navigate("/")}}>Back Button</button>
-      </header>
+      </section>
     </div>
   );
 }

@@ -1,12 +1,12 @@
 function About() {
   return (
     <div className="App">
-      <header className="App-header">
+      <section className="App-header">
         <p>
           ABOUT PAGE
         </p>
         <button>Back Button</button>
-      </header>
+      </section>
     </div>
   );
 }

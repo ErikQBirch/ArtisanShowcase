@@ -4,7 +4,10 @@ import ContactUs from "./pages/ContactUs";
 import Header from './components/header';
 import Home from './pages/Home';
 import NoPage from './pages/NoPage';
-import Portfolio from "./pages/Portfolio";
+
+import Artwork from "./pages/Artwork";
+import Writings from "./pages/Writings";
+import Music from "./pages/Music";
 
 
 function App() {
@@ -14,7 +17,9 @@ function App() {
       <Routes>
           <Route path="/" element={<Header/>}>
             <Route index element={<Home/>}/>
-            <Route exact path="portfolio" element={<Portfolio/>}/>
+            <Route exact path="artwork" element={<Artwork/>}/>
+            <Route exact path="writings" element={<Writings/>}/>
+            <Route exact path="music" element={<Music/>}/>
             <Route exact path="about" element={<About/>}/>
             <Route exact path="contactus" element={<ContactUs/>}/>
             <Route exact path="*" element={<NoPage/>}/>
