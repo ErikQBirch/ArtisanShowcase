@@ -1,0 +1,53 @@
+@mixin mobileHeader{
+  header{
+    nav{
+      ul{
+        li{
+          a:link, a:visited{}
+        }
+      }
+    }
+  }
+}
+@mixin minHeader{
+  header{
+    nav{
+      ul{
+        li{
+          a:link, a:visited{}
+        }
+      }
+    }
+  }
+}
+@mixin medHeader{
+  header{
+    nav{
+      ul{
+        li{
+          a:link, a:visited{}
+        }
+      }
+    }
+  }
+}
+@mixin maxHeader{
+  header{
+    position:absolute;
+    top:0;
+    width: 100%;
+    z-index: 1;
+
+    background-color: red;
+    nav{
+      ul{
+        display:flex;
+        list-style: none;
+        justify-content:end;
+        li{
+          a:link, a:visited{}
+        }
+      }
+    }
+  }
+}
