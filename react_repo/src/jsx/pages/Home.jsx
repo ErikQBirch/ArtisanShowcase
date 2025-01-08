@@ -5,7 +5,7 @@ import '../../scss/App.css';
 
 function Home() {
   return (
-        <body className="App-header">
+        <section className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
@@ -18,7 +18,7 @@ function Home() {
           >
             Learn React
           </a> */}
-      </body>
+      </section>
   );
 }
 

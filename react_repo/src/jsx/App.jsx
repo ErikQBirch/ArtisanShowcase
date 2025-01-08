@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route, Navigate, Link, Redirect } from "react-router-dom"
-import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
 import ContactUs from "./pages/ContactUs";
 import Header from './components/header';
 import Home from './pages/Home';
 import NoPage from './pages/NoPage';
+import Portfolio from "./pages/Portfolio";
 
 
 function App() {
