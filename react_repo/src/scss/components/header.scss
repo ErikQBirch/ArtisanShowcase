@@ -1,12 +1,67 @@
+$headerHeight: 2.75rem;
+
+
 @mixin mobileHeader{
   header{
+    position: fixed;
+    width: 100%;
+    height: $headerHeight;
+    z-index:1;
+    overflow: hidden;
+    top:0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    transition-delay: 0.75s;
+    .basicNav{
+      position:absolute;
+      top:0;
+      height: 2.5rem;
+      width: 100%;
+      padding: 0 1rem;
+      z-index: 2;
+      display:flex;
+      justify-content: space-between;
+      // background-color: red;
+      h1{}
+      button{}
+    }
     nav{
+      position:absolute;
+      top:100vh;
+      width: 100%;
+      height: 100vh;
+      z-index: 1;
+      background-color: rgba(0,0,0,0.5);
+      display:flex;
+      flex-direction: column;
+      align-items:center;
+      justify-content: center;
+      transition:all 0.75s ease-in-out;
       ul{
+        list-style: none;
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        justify-self: center;
         li{
-          a:link, a:visited{}
+          a:link, a:visited{
+            color:white;
+            text-decoration: none;
+          }
         }
       }
     }
+  }
+  header.sideNav_open{
+    height: 100vh;
+    transition-delay:0s;
+    nav{
+      top:0vh;
+    }
+  }
+  .blur{
+    filter: blur(5px);
   }
 }
 @mixin minHeader{
@@ -22,28 +77,48 @@
 }
 @mixin medHeader{
   header{
+    transition-delay: 0s;
+    .basicNav{
+      z-index:1;
+      h1{}
+      button{
+        display:none;
+      }
+    }
     nav{
+      height: $headerHeight;
+      top:0vh;
+      background-color: transparent;
+      align-items: end;
+      transition:all 0s ease-in-out;
       ul{
+        flex-direction: row;
+        margin-right: -2rem;
         li{
-          a:link, a:visited{}
+          width: fit-content;
+          a:link, a:visited{
+            margin-right: 2.5rem;
+          }
         }
       }
+    }
+  }
+  header.sideNav_open{
+    height: $headerHeight;
+    nav{
     }
   }
 }
 @mixin maxHeader{
   header{
-    position:absolute;
-    top:0;
-    width: 100%;
-    z-index: 1;
-
-    background-color: red;
+    // width: 100%;
+    // z-index: 1;
     nav{
+      
       ul{
-        display:flex;
-        list-style: none;
-        justify-content:end;
+        // display:flex;
+        // list-style: none;
+        // justify-content:end;
         li{
           a:link, a:visited{}
         }

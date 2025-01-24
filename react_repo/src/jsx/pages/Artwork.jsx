@@ -12,8 +12,7 @@ function Artwork() {
 
 
   return (
-    <div className="App">
-      <section className="App-header">
+      <main className="App-header">
         <p>
           Artwork PAGE
         </p>
@@ -22,8 +21,7 @@ function Artwork() {
             setGoToHome(true);
           }}
         >Back Button</button>
-      </section>
-    </div>
+      </main>
   );
 }
 

@@ -13,7 +13,7 @@ function Portfolio() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <main className="App-header">
         <p>
           Portfolio PAGE
         </p>
@@ -22,7 +22,7 @@ function Portfolio() {
             setGoToHome(true);
           }}
         >Back Button</button>
-      </header>
+      </main>
     </div>
   );
 }

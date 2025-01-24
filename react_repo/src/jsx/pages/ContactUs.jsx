@@ -7,15 +7,13 @@ function ContactUs() {
   const navigate = useNavigate();
 
   return (
-    <div className="App">
-      <section className="App-header">
+      <main className="App-header">
         <p>
           CONTACT US PAGE
         </p>
         <button
           onClick={() => {navigate("/")}}>Back Button</button>
-      </section>
-    </div>
+      </main>
   );
 }
 

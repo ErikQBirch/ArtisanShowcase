@@ -12,8 +12,7 @@ function Writings() {
 
 
   return (
-    <div className="App">
-      <section className="App-header">
+      <main className="App-header">
         <p>
           Writings PAGE
         </p>
@@ -22,8 +21,7 @@ function Writings() {
             setGoToHome(true);
           }}
         >Back Button</button>
-      </section>
-    </div>
+      </main>
   );
 }
 
