@@ -14,7 +14,9 @@ import Misc_scrap from './components/misc/misc_scrap';
 import Contact_scrap from './components/contact/contact_scrap';
 import About_scrap from './components/about/about_scrap';
 
-import './App.css'
+import "./scss/index.css"
+
+// import './App.css'
 
 
 
