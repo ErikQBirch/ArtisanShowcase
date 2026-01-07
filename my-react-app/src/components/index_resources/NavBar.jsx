@@ -82,12 +82,12 @@ const NavBar = () => {
           <li className="nav-item">
             <Link to="/contact" className="nav-link">Contact</Link> {/* Example: link to contact page */}
           </li>
-
+          
           {/* Add more links as needed */}
         </ul>
       </nav>
       
-      {isOverlayOpen && (
+      {isOverlayOpen && !isLargeScreen && (
         <div className="overlay-menu">
           <button className="overlay-close" onClick={toggleOverlay}>×</button>
           <ul className="overlay-nav">
