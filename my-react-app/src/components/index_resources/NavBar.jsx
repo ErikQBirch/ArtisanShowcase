@@ -1,14 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; // Import Link
 // import './NavBar.css'; // Optional: for styling
 
 const NavBar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   const toggleOverlay = () => {
     setIsOverlayOpen(!isOverlayOpen);
   };
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsLargeScreen(window.innerWidth >= 992);
+    };
+
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
 
   return (
     <>
@@ -22,29 +34,48 @@ const NavBar = () => {
           <span className="hamburger-line"></span>
         </button>
         <ul className="navbar-nav">
-          <li 
-            className="nav-item dropdown" 
-            onMouseEnter={() => setIsDropdownOpen(true)} 
-            onMouseLeave={() => setIsDropdownOpen(false)}
-          >
-            <span className="nav-link">Portfolio</span>
-            {isDropdownOpen && (
-              <ul className="dropdown-menu">
-                <li>
-                  <Link to="/writings" className="dropdown-link">Writings</Link>
-                </li>
-                <li>
-                  <Link to="/artwork" className="dropdown-link">Artwork</Link>
-                </li>
-                <li>
-                  <Link to="/music" className="dropdown-link">Music</Link>
-                </li>
-                <li>
-                  <Link to="/misc" className="dropdown-link">Misc</Link>
-                </li>
-              </ul>
-            )}
+          {!isLargeScreen && (
+            <li 
+              className="nav-item dropdown" 
+              onMouseEnter={() => setIsDropdownOpen(true)} 
+              onMouseLeave={() => setIsDropdownOpen(false)}
+            >
+              <span className="nav-link">Portfolio</span>
+              {isDropdownOpen && (
+                <ul className="dropdown-menu">
+                  <li>
+                    <Link to="/writings" className="dropdown-link">Writings</Link>
+                  </li>
+                  <li>
+                    <Link to="/artwork" className="dropdown-link">Artwork</Link>
+                  </li>
+                  <li>
+                    <Link to="/music" className="dropdown-link">Music</Link>
+                  </li>
+                  <li>
+                    <Link to="/misc" className="dropdown-link">Misc</Link>
+                  </li>
+                </ul>
+              )}
+            </li>
+          )}
+          
+          {isLargeScreen && (
+            <>
+            <li className="nav-item">
+            <Link to="/writings" className="nav-link maxScreenOnly">Writings</Link> {/* Example: link to writings page */}
           </li>
+          <li className="nav-item">
+            <Link to="/artwork" className="nav-link maxScreenOnly">Artwork</Link> {/* Example: link to artwork page */}
+          </li>
+          <li className="nav-item">
+            <Link to="/music" className="nav-link maxScreenOnly">Music</Link> {/* Example: link to music page */}
+          </li>
+          <li className="nav-item">
+            <Link to="/misc" className="nav-link maxScreenOnly">Misc</Link> {/* Example: link to misc page */}
+          </li>
+            </>
+          )}
           <li className="nav-item">
             <Link to="/about" className="nav-link">About</Link> {/* Example: link to about page */}
           </li>

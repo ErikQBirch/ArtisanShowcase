@@ -94,6 +94,9 @@
     margin: 0;
     padding: 0;
   }
+  .navbar .navbar-nav .maxScreenOnly {
+    display: none;
+  }
   .navbar .navbar-nav .nav-item {
     margin-left: 1rem;
   }
@@ -147,6 +150,9 @@
     display: flex;
     flex-direction: row;
   }
+  .navbar .navbar-nav .maxScreenOnly {
+    display: inline;
+  }
   .navbar .navbar-nav .nav-item {
     display: flex;
     flex-direction: row;
@@ -156,7 +162,7 @@
     flex-direction: row;
   }
   .navbar .navbar-nav .dropdown {
-    display: flex;
+    display: none;
     flex-direction: row;
   }
   .navbar .navbar-nav .dropdown .dropdown-menu {
