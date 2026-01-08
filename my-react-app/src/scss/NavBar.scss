@@ -3,7 +3,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #333;
+        // background-color: #333;
         color: white;
         padding: 1rem;
         .navbar-brand a {
@@ -116,7 +116,9 @@
                 }
                 
                 .nav-link:hover {
-                    background-color: #555;
+                    // background-color: #555;
+                    text-decoration: underline;
+                    font-weight:bold;
                 }
             }
             
@@ -162,7 +164,7 @@
 }
 @media only all and (min-width: 992px) {
         .navbar {
-            flex-direction: column;
+            // flex-direction: column;
             .navbar-brand{
                 margin: 15px 0;
         }

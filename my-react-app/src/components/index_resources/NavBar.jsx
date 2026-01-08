@@ -62,18 +62,21 @@ const NavBar = () => {
           
           {isLargeScreen && (
             <>
-            <li className="nav-item">
-            <Link to="/writings" className="nav-link maxScreenOnly">Writings</Link> {/* Example: link to writings page */}
-          </li>
-          <li className="nav-item">
-            <Link to="/artwork" className="nav-link maxScreenOnly">Artwork</Link> {/* Example: link to artwork page */}
-          </li>
-          <li className="nav-item">
-            <Link to="/music" className="nav-link maxScreenOnly">Music</Link> {/* Example: link to music page */}
-          </li>
-          <li className="nav-item">
-            <Link to="/misc" className="nav-link maxScreenOnly">Misc</Link> {/* Example: link to misc page */}
-          </li>
+              <li className="nav-item">
+                <Link to="/" className="nav-link maxScreenOnly">Home</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/writings" className="nav-link maxScreenOnly">Writings</Link> {/* Example: link to writings page */}
+              </li>
+              <li className="nav-item">
+                <Link to="/artwork" className="nav-link maxScreenOnly">Artwork</Link> {/* Example: link to artwork page */}
+              </li>
+              <li className="nav-item">
+                <Link to="/music" className="nav-link maxScreenOnly">Music</Link> {/* Example: link to music page */}
+              </li>
+              <li className="nav-item">
+                <Link to="/misc" className="nav-link maxScreenOnly">Misc</Link> {/* Example: link to misc page */}
+              </li>
             </>
           )}
           <li className="nav-item">
