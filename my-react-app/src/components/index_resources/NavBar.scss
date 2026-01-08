@@ -6,6 +6,10 @@
         // background-color: #333;
         color: white;
         padding: 1rem;
+        z-index:10;
+        position:absolute;
+        top:0;
+        width: 100vw;
         .navbar-brand a {
             color: white;
             text-decoration: none;
@@ -129,7 +133,7 @@
                     position: absolute;
                     top: 100%;
                     left: 0;
-                    background-color: #333;
+                    background-color: rgba(30,30,30,0.75);
                     list-style: none;
                     margin: 0;
                     padding: 0;
@@ -152,7 +156,8 @@
                 }
                 
                 .dropdown-link:hover {
-                    background-color: #555;
+                    background-color: rgba(50,50,50,0.75);
+                    text-decoration: underline;
                 }
             }
         

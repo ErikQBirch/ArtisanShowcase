@@ -1,0 +1,29 @@
+@media only all and (min-width: 0) {
+  .banner_article figure {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .banner_article figure img {
+    display: flex;
+    width: auto;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+  .banner_article figure h1 {
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+  }
+}/*# sourceMappingURL=homepage.css.map */

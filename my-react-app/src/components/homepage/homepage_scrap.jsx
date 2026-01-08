@@ -1,16 +1,42 @@
-// import { useState } from 'react'
-import Artwork_scrap from '../artwork/artwork_scrap';
-import Writings_scrap from '../writings/writings_scrap';
-import Music_scrap from '../music/music_scrap';
-import Misc_scrap from '../misc/misc_scrap';
-import Index_scrap from '../index_resources/index_scrap';
+import React from 'react';
+import './homepage.css';
 
 function Homepage_scrap() {
   
 
   return (
     <>
-        <h1>Homepage</h1>
+        <article id="homepage_banner" className="banner_article">
+          <figure>
+            <img src="../public/homepage_banner.webp"></img>
+            <h1>Home</h1>
+          </figure>
+        </article>
+        <article id="writings_banner" className="banner_article">
+          <figure>
+            <img src="../public/homepage_banner.webp"></img>
+            <h1>Writings</h1>
+          </figure>
+        </article>
+        <article id="artwork_banner" className="banner_article">
+          <figure>
+            <img src="../public/homepage_banner.webp"></img>
+            <h1>Artwork</h1>
+          </figure>
+        </article>
+        <article id="music_banner" className="banner_article">
+          <figure>
+            <img src="../public/homepage_banner.webp"></img>
+            <h1>Music</h1>
+          </figure>
+        </article>
+        <article id="misc_banner" className="banner_article">
+          <figure>
+            <img src="../public/homepage_banner.webp"></img>
+            <h1>Misc</h1>
+          </figure>
+        </article>
+
     </>
   )
 }

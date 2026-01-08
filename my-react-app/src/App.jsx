@@ -15,7 +15,7 @@ import Contact_scrap from './components/contact/contact_scrap';
 import About_scrap from './components/about/about_scrap';
 
 import "./scss/index.css"
-import './scss/NavBar.css'; // Optional: for styling
+import './components/index_resources/NavBar.css'; // Optional: for styling
 
 
 // import './App.css'
