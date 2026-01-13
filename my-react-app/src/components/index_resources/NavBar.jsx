@@ -98,7 +98,7 @@ const NavBar = () => {
               <Link to="/" onClick={toggleOverlay}>Home</Link>
             </li>
             <li className="overlay-item">
-              <span className="overlay-dropdown-toggle">Portfolio</span>
+              <span className="overlay-dropdown-toggle"></span>
               <ul className="overlay-dropdown">
                 <li><Link to="/writings" onClick={toggleOverlay}>Writings</Link></li>
                 <li><Link to="/artwork" onClick={toggleOverlay}>Artwork</Link></li>

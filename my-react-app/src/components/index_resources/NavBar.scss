@@ -72,6 +72,9 @@
                     padding: 0.5rem 1rem;
                     display: block;
                 }
+                span, .overlay-dropdown-toggle{
+                    display:none;
+                }
                 .overlay-dropdown {
                     list-style: none;
                     padding: 0;
@@ -81,7 +84,7 @@
                         margin: 0.5rem 0;
 
                         a {
-                            font-size: 1.2rem;
+                            // font-size: 1.2rem;
                             color: #ccc;
                         }
                     }
