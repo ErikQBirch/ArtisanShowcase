@@ -1,0 +1,54 @@
+@media only all and (min-width: 0) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2.5rem;
+  }
+  footer div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer div article {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer div article ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80vw;
+  }
+  footer div article ul li {
+    display: flex;
+  }
+  footer div article ul li a {
+    text-decoration: none;
+    color: white;
+  }
+}
+@media only all and (min-width: 760px) {
+  footer div {
+    display: flex;
+  }
+  footer div article ul {
+    width: 60vw;
+  }
+}
+@media only all and (min-width: 992px) {
+  footer div {
+    flex-direction: row;
+  }
+  footer div article {
+    margin: 1rem 2.5rem;
+  }
+  footer div article ul {
+    width: 25vw;
+  }
+}/*# sourceMappingURL=footer.css.map */

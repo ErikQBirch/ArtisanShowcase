@@ -6,6 +6,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage_scrap from './components/homepage/homepage_scrap'
 import NavBar from './components/index_resources/NavBar'
+import Footer from './components/index_resources/footer';
 import Artwork_scrap from './components/artwork/artwork_scrap';
 import Music_scrap from './components/music/music_scrap';
 import Writings_scrap from './components/writings/writings_scrap';
@@ -15,7 +16,8 @@ import Contact_scrap from './components/contact/contact_scrap';
 import About_scrap from './components/about/about_scrap';
 
 import "./scss/index.css"
-import './components/index_resources/NavBar.css'; // Optional: for styling
+// import './components/index_resources/NavBar.css'; // Optional: for styling
+// import './components/index_resources/footer.css';
 
 
 // import './App.css'
@@ -40,6 +42,7 @@ function App() {
           <Route path="/about" element={<About_scrap />} />
 
         </Routes>
+        <Footer />
       </Router>
 
 
@@ -68,3 +71,4 @@ function App() {
 }
 
 export default App
+1

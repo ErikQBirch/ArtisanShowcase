@@ -20,13 +20,111 @@
   }
   .banner_article figure h1 {
     position: absolute;
-    color: white;
     font-size: 3rem;
-    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .banner_article figure h1 a:link, .banner_article figure h1 a:visited, .banner_article figure h1 a:active, .banner_article figure h1 a:hover {
+    font-weight: 100;
+    color: white;
+    text-decoration: none;
     padding: 1rem 2rem;
+    border: 1px solid white;
     border-radius: 10px;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 30vw;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .banner_article figure h1 a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .banner_article .contact_me_section {
+    width: 100%;
+    height: auto;
+    background-color: rgba(25, 25, 25, 0.8);
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .banner_article .contact_me_section form {
+    width: 100%;
+    max-width: 75vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .banner_article .contact_me_section form h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .banner_article .contact_me_section form article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .banner_article .contact_me_section form article p {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .banner_article .contact_me_section form article input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  .banner_article .contact_me_section form article textarea {
+    width: 100%;
+    height: 150px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: none;
+  }
+  .banner_article .contact_me_section form article div#contactMethodOptions {
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    width: 100%;
+  }
+  .banner_article .contact_me_section form article div#contactMethodOptions label {
+    margin-right: 1rem;
+  }
+  .banner_article .contact_me_section form article div#contactMethodOptions input {
+    margin: 0;
+    width: 100%;
+  }
+  .banner_article .contact_me_section form article div#contactMethodInfo {
+    color: white;
+    font-size: 0.9rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .banner_article .contact_me_section form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .banner_article .contact_me_section form button:hover {
+    background-color: #555;
   }
   .contact_me_section {
     width: 100%;
