@@ -1,0 +1,43 @@
+@media only all and (min-width: 0){
+    * {
+        // background-color: blue;
+    }
+    #banner{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10vh 0rem 2.5rem 0rem;
+        background-color: red;
+        height: 40vh;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        h1{
+            font-size: 3rem;
+            color: white;
+            margin: 2.5rem 0rem;
+        }
+        #filter{
+            button{
+                margin: 1rem 1rem;
+                padding: 0.5rem 1rem;
+                font-size: 1rem;
+                border: none;
+                border-radius: 5px;
+                background-color: white;
+                color: black;
+                cursor: pointer;
+                transition: background-color 0.3s, color 0.3s;
+                &:hover{
+                    background-color: black;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+@media only all and (min-width: 760px){}
+@media only all and (min-width: 992px){}
+@media only all and (min-width: 1200px){}
