@@ -6,11 +6,11 @@ import './homepage.css';
 
 function Homepage_scrap() {
   let optionsArray = [
-    { id: 0, name: 'Latest Updates', link: '/', img: 'imagination.webp' },
-    { id: 1, name: 'Writings', link: '/writings', img: 'imagination.webp' },
-    { id: 2, name: 'Artwork', link: '/artwork', img: 'imagination.webp' },
-    { id: 3, name: 'Music', link: '/music', img: 'imagination.webp' },
-    { id: 4, name: 'Misc', link: '/misc', img: 'imagination.webp' },
+    { id: 0, name: 'Latest Updates', link: '/', img: 'images/imagination.webp' },
+    { id: 1, name: 'Writings', link: '/writings', img: 'images/imagination.webp' },
+    { id: 2, name: 'Artwork', link: '/artwork', img: 'images/imagination.webp' },
+    { id: 3, name: 'Music', link: '/music', img: 'images/imagination.webp' },
+    { id: 4, name: 'Misc', link: '/misc', img: 'images/imagination.webp' },
   ];
   return (
     <>
