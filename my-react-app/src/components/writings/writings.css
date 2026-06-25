@@ -1,0 +1,35 @@
+@media only all and (min-width: 0) {
+  #banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10vh 0rem 2.5rem 0rem;
+    background-color: red;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+  }
+  #banner h1 {
+    font-size: 3rem;
+    color: white;
+    margin: 2.5rem 0rem;
+  }
+  #banner #filter button {
+    margin: 1rem 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  #banner #filter button:hover {
+    background-color: black;
+    color: white;
+  }
+}/*# sourceMappingURL=writings.css.map */
