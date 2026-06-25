@@ -17,6 +17,7 @@ function Homepage_scrap() {
       <section>
         {optionsArray.map((option) => (
           <article key={option.id} id={option.name.toLowerCase() + "_banner"} className="banner_article">
+            <div className="banner_overlay"></div>
             <figure>
               <img src={`${import.meta.env.BASE_URL}${option.img}`} alt={option.name} />
               <h1><Link to={option.link}>{option.name}</Link></h1>
