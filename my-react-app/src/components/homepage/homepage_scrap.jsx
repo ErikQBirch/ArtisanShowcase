@@ -6,11 +6,11 @@ import './homepage.css';
 
 function Homepage_scrap() {
   let optionsArray = [
-    { id: 0, name: 'Home', link: '/', img: '../public/imagination.webp' },
-    { id: 1, name: 'Writings', link: '/writings', img: '../public/imagination.webp' },
-    { id: 2, name: 'Artwork', link: '/artwork', img: '../public/imagination.webp' },
-    { id: 3, name: 'Music', link: '/music', img: '../public/imagination.webp' },
-    { id: 4, name: 'Misc', link: '/misc', img: '../public/imagination.webp' },
+    { id: 0, name: 'Latest Updates', link: '/', img: 'imagination.webp' },
+    { id: 1, name: 'Writings', link: '/writings', img: 'imagination.webp' },
+    { id: 2, name: 'Artwork', link: '/artwork', img: 'imagination.webp' },
+    { id: 3, name: 'Music', link: '/music', img: 'imagination.webp' },
+    { id: 4, name: 'Misc', link: '/misc', img: 'imagination.webp' },
   ];
   return (
     <>
@@ -18,7 +18,7 @@ function Homepage_scrap() {
         {optionsArray.map((option) => (
           <article key={option.id} id={option.name.toLowerCase() + "_banner"} className="banner_article">
             <figure>
-              <img src={`/${import.meta.env.BASE_URL}${option.img}`} alt={option.name} />
+              <img src={`${import.meta.env.BASE_URL}${option.img}`} alt={option.name} />
               <h1><Link to={option.link}>{option.name}</Link></h1>
             </figure>
           </article>
