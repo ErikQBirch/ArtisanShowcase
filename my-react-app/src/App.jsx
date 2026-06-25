@@ -3,7 +3,8 @@
 // import viteLogo from '/vite.svg'
 // import Scrap from './Scrap/scrap.jsx'
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage_scrap from './components/homepage/homepage_scrap'
 import NavBar from './components/index_resources/NavBar'
 import Footer from './components/index_resources/footer';
