@@ -10,7 +10,15 @@
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 1;
+    pointer-events: none;
+  }
+  .banner_article.overlay_visible .banner_overlay {
+    opacity: 1;
+    visibility: visible;
   }
   .banner_article figure {
     margin: 0;

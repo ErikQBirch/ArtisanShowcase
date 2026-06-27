@@ -5,36 +5,48 @@ import './homepage.css';
 
 
 function Homepage_scrap() {
-  const [visibleBannerIds, setVisibleBannerIds] = useState(new Set());
+  const [overlayVisibleBannerIds, setOverlayVisibleBannerIds] = useState(new Set());
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        setVisibleBannerIds((prev) => {
-          const next = new Set(prev);
-          let changed = false;
+    const updateOverlayVisibility = () => {
+      const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+      const nextVisibleIds = new Set();
 
-          entries.forEach((entry) => {
-            const id = entry.target.id;
-            if (entry.intersectionRatio > 0.5) {
-              if (!next.has(id)) {
-                next.add(id);
-                changed = true;
-              }
-            } else if (next.has(id)) {
-              next.delete(id);
-              changed = true;
-            }
-          });
+      document.querySelectorAll('.banner_article').forEach((article) => {
+        const rect = article.getBoundingClientRect();
+        const visibleHeight = Math.max(0, Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0));
+        const visibleRatio = visibleHeight / (rect.height || 1);
 
-          return changed ? next : prev;
+        if (visibleRatio < 0.5) {
+          nextVisibleIds.add(article.id);
+        }
+      });
+
+      setOverlayVisibleBannerIds((prev) => {
+        const isSame = prev.size === nextVisibleIds.size && [...prev].every((id) => nextVisibleIds.has(id));
+        return isSame ? prev : nextVisibleIds;
+      });
+    };
+
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateOverlayVisibility();
+          ticking = false;
         });
-      },
-      { threshold: [0, 0.5, 1] }
-    );
+        ticking = true;
+      }
+    };
 
-    document.querySelectorAll('.banner_article').forEach((article) => observer.observe(article));
-    return () => observer.disconnect();
+    updateOverlayVisibility();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', updateOverlayVisibility);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', updateOverlayVisibility);
+    };
   }, []);
 
   let optionsArray = [
@@ -53,7 +65,7 @@ function Homepage_scrap() {
             <article
               key={option.id}
               id={articleId}
-              className={`banner_article${visibleBannerIds.has(articleId) ? ' visible' : ''}`}
+              className={`banner_article${overlayVisibleBannerIds.has(articleId) ? ' overlay_visible' : ''}`}
             >
               <div className="banner_overlay"></div>
               <figure>
